@@ -1,0 +1,10 @@
+# Entorno virtual
+venv/
+
+# Token y configuración sensible
+data/config.py
+
+# Cache de Python
+__pycache__/
+*.pyc
+

@@ -1,0 +1,2 @@
+# Configuración de APIs
+TELEGRAM_TOKEN = '8708171727:AAFLpgGQaagqxXCStOCH5lXr6JHkap21UIk'
