@@ -45,7 +45,6 @@ Contenido de `requirements.txt`:
 
 python-telegram-bot>=20.0
 httpx
-asyncio
 
 
 ## 4. Configurar el token
