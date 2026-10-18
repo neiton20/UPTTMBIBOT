@@ -73,7 +73,7 @@ TEXTO_CONTEXTO_INSTITUCIONAL = (
     "🏛️ **Planilla de Posgrado** – Recaudos para especializaciones y maestrías.\n"
     "📜 **Reseña Histórica** – Origen, evolución y autoridades de nuestra universidad.\n"
     "📚 **PNF (Programas Nacionales de Formación)** – Listado completo de carreras, perfiles de egreso y sedes.\n"
-    "📍 **Cedes** – Información sobre cada núcleo y los PNF que ofrecen.\n\n"
+    "📍 **Sedes** – Información sobre cada núcleo y los PNF que ofrecen.\n\n"
     "⬇️ **Selecciona una opción:**"
 )
 
@@ -89,7 +89,7 @@ def _keyboard_institucional():
             InlineKeyboardButton("📚 PNF", callback_data='pnf_listado')
         ],
         [
-            InlineKeyboardButton("📍 Cedes", callback_data='mostrar_cedes')
+            InlineKeyboardButton("📍 Sedes", callback_data='mostrar_sedes')
         ],
         [InlineKeyboardButton("⬅️ Volver al Inicio", callback_data='volver_inicio')]
     ])

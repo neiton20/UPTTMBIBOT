@@ -5,8 +5,12 @@ import os
 
 # Diccionario con los nombres exactos de los archivos
 ARCHIVOS_PST = {
-    'pst_descripcion': 'DESCRIPCIÓN DE CADA UNA DE LAS PARTES odt.pdf',
-    'pst_normas': 'NORMAS PARA LA ELABORACIÓN Y PRESENTACIÓN DEL PSIT.pdf'
+    'pst_comunicado': 'Formato de Comunicado de PST I.doc',
+    'pst_fps_01': 'FORMATO FPS-01.docx',
+    'pst_fps_02': 'FORMATO FPS-02.docx',
+    'pst_fps_03': 'FORMATO FPS-03.docx',
+    'pst_fps_04': 'FORMATO FPS-04.docx',
+    'pst_reglamento': 'Reglamento del PST - 2017.pdf'
 }
 
 # Texto de contexto para el PST
@@ -15,18 +19,25 @@ TEXTO_CONTEXTO_PST = (
     "El Proyecto Sociotecnológico (PST) es una actividad académica obligatoria "
     "en la UPTTMBI, donde los estudiantes aplican conocimientos tecnológicos "
     "para resolver problemas reales en comunidades o empresas.\n\n"
-    "Aquí encontrarás los documentos fundamentales:\n"
-    "• Descripción de cada una de las partes del PST\n"
-    "• Normas para la elaboración y presentación del PSIT\n\n"
+    "Aquí encontrarás los formatos oficiales y la normativa vigente:\n"
+    "• Comunicado para la institución\n"
+    "• FPS-01 al FPS-04 (Inscripción, Asesorías, Planificación y Autorización)\n"
+    "• Reglamento oficial del PST (2017)\n\n"
     "⬇️ **Selecciona el documento que necesitas:**"
 )
 
+
 def _keyboard_pst():
     return InlineKeyboardMarkup([
-        [InlineKeyboardButton("1. Descripción de las Partes", callback_data='pst_descripcion')],
-        [InlineKeyboardButton("2. Normas de Elaboración PSIT", callback_data='pst_normas')],
+        [InlineKeyboardButton("1. Comunicado PST I", callback_data='pst_comunicado')],
+        [InlineKeyboardButton("2. FPS-01: Inscripción del Proyecto", callback_data='pst_fps_01')],
+        [InlineKeyboardButton("3. FPS-02: Control de Asesoría", callback_data='pst_fps_02')],
+        [InlineKeyboardButton("4. FPS-03: Control de Planificación", callback_data='pst_fps_03')],
+        [InlineKeyboardButton("5. FPS-04: Autorización Socialización", callback_data='pst_fps_04')],
+        [InlineKeyboardButton("6. Reglamento del PST (2017)", callback_data='pst_reglamento')],
         [InlineKeyboardButton("⬅️ Volver al Inicio", callback_data='volver_inicio')]
     ])
+
 
 async def mostrar_menu_pst(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Muestra el menú de PST editando el mensaje original (con contexto)."""

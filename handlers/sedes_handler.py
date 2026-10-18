@@ -134,7 +134,7 @@ async def mostrar_detalle_sede(update: Update, context: ContextTypes.DEFAULT_TYP
 
 # MANEJADORES PRINCIPALES PARA EL ROUTER
 
-async def manejar_mostrar_cedes(update: Update, context: ContextTypes.DEFAULT_TYPE):
+async def manejar_mostrar_sedes(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Callback para 'mostrar_cedes' (primera vez que se entra a sedes)."""
     await mostrar_listado_cedes(update, context)
 

@@ -14,7 +14,7 @@ from handlers.pnf_handler import (
     manejar_perfil_pnf, 
     manejar_menu_pnf
 )
-from handlers.sedes_handler import manejar_mostrar_cedes, manejar_sede_detalle
+from handlers.sedes_handler import manejar_mostrar_sedes, manejar_sede_detalle
 import os
 import asyncio
 
@@ -122,8 +122,8 @@ async def callback_dispatcher(update, context):
         await manejar_menu_pnf(update, context)
 
     # Sedes
-    elif data == 'mostrar_cedes':
-        await manejar_mostrar_cedes(update, context)
+    elif data == 'mostrar_sedes':
+        await manejar_mostrar_sedes(update, context)
     elif data.startswith('sede_detalle_'):
         await manejar_sede_detalle(update, context)
 
